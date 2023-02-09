@@ -592,14 +592,14 @@ armenia.regions[9].cities[2].self_goverments.addStaff();
 armenia.regions[9].cities[2].self_goverments.addStaff();
 
 
-function clone(object) {
+function clone(cloneCountry) {
     let result = {};
-    for (const key in object) {
-        if (typeof object[key] === "object") {
-            result[key] = clone(object[key])
+    for (const key in cloneCountry) {
+        if (typeof cloneCountry[key] === "object") {
+            result[key] = clone(cloneCountry[key])
         }
         else {
-            result[key] = object[key]
+            result[key] = cloneCountry[key]
         }
     }
     return result
